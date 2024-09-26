@@ -5,6 +5,41 @@ HEX:
 #989b9e grigio1 
 #748481 grigio-verde
 */
+:root {
+  --color-p: #dac7b5;
+  --color-s: #181f26;
+  --color-a: #989b9e;
+}
+*{
+    color: var(--color-s);
+}
+nav {
+  background-color: white;
+}
+body {
+  height: 200vh;
+}
 .main-logo {
   width: 150px;
+}
+.navbar-scroll {
+  margin: 3vh 3vw;
+  background-color: transparent;
+  backdrop-filter: blur(10px);
+}
+.transition {
+  transition: 0.3s;
+}
+
+.background-p{
+  background-color: var(--color-p);
+}
+.background-s{
+  background-color: var(--color-s);
+}
+.background-a{
+  background-color: var(--color-a);
+}
+.text-s{
+  color: var(--color-s);
 }
