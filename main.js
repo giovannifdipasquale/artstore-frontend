@@ -1,8 +1,11 @@
 // SELECTORS
 const navbar = document.querySelector("nav");
+const numbers = document.querySelectorAll(".numbers");
 // VARIABLES
 
+
 // FUNCTIONS
+
 
 // TRIGGERS
 window.addEventListener("scroll", () => {

@@ -73,6 +73,18 @@ body {
   color: var(--color-a);
 
 }
+.row-title {
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+
+}
+.row-title-auction {
+  border-color: #181f26;
+
+}
+.row-title-categories {
+  border-color: var(--color-p)
+}
 
 .row-categorie {
   background-color: var(--color-p);
@@ -86,11 +98,11 @@ body {
 }
 
 .div-categorie:hover {
+  transform: scale(1.1);
 }
-transform: scale(1.1);
 
 .transition {
-  transition: ease-in-out 0.3s;
+  transition: ease-in-out 0.2s;
 }
 
 .img-logo {
