@@ -11,29 +11,53 @@
 */
 
 // SELECTORS
+// navbar
 const navbar = document.querySelector("nav");
-const numbers = document.querySelectorAll(".numbers");
+// cards section
 const cardsWrapper = document.querySelector(".cardsWrapper");
+// buttons section
 const radiowrapper = document.querySelector("#radiowrapper");
-// VARIABLES
 
 // FUNCTIONS 
-// f creates card 
-function createCards(array) {
-  // classes for the cards: col-12 col-sm-6 card
-  array.forEach(element => {
-    let div = document.createElement("div");
-    div.classList.add("col-12", "col-sm-6", "card");
-    div.innerHTML = `
-      <img src="${element.img}">
-      <div class="card-body">
-        <h5 class="card-title">${element.name}</h5>
-        <p class="card-text"><strong>$ ${element.price}</strong></p>
-        <p class="card-text"> ${element.date} </p>
-      </div>`;
-    cardsWrapper.appendChild(div);
-  });
+// f creates / filters cards
+function createCards(array, category) {
+  // empty cards wrapper
+  cardsWrapper.innerHTML = '';
+  if (category == "All") {
+    array.forEach(element => {
+      let div = document.createElement("div");
+      div.classList.add("col-12", "col-sm-6", "card");
+      div.innerHTML = `
+          <img src="${element.img}">
+          <div class="card-body">
+            <h5 class="card-title">${element.name}</h5>
+            <p class="card-text"><strong>$ ${element.price}</strong></p>
+            <p class="card-text category"><strong>${element.category}</strong></p>
+            <p class="card-text"> ${element.date} </p>
+          </div>`;
+      cardsWrapper.appendChild(div);
+    });
+  }
+  else {
+    array.forEach(element => {
+      if (element.category == category) {
+
+        let div = document.createElement("div");
+        div.classList.add("col-12", "col-sm-6", "card");
+        div.innerHTML = `
+            <img src="${element.img}">
+            <div class="card-body">
+              <h5 class="card-title">${element.name}</h5>
+              <p class="card-text"><strong>$ ${element.price}</strong></p>
+              <p class="card-text category"><strong>${element.category}</strong></p>
+              <p class="card-text"> ${element.date} </p>
+            </div>`;
+        cardsWrapper.appendChild(div);
+      }
+    });
+  }
 }
+
 
 // f that creates radio buttons 
 function createBtns(array) {
@@ -42,7 +66,8 @@ function createBtns(array) {
     if (!uniqueCategories.includes(product.category)) {
       uniqueCategories.push(product.category);
     }
-  })
+  });
+
   console.log(uniqueCategories);
   // Attaching unique categories as radio buttons
   uniqueCategories.forEach(category => {
@@ -50,7 +75,7 @@ function createBtns(array) {
     div.classList.add("form-check");
     div.innerHTML = `
     <div class="form-check">
-      <input class="form-check-input" type="radio" name="flexRadioDefault" id="${category}" checked>
+      <input class="form-check-input" type="radio" name="flexRadioDefault" id="${category}">
       <label class="form-check-label" for="${category}">
         ${category}
       </label>
@@ -58,6 +83,21 @@ function createBtns(array) {
       `;
     radiowrapper.appendChild(div);
   });
+  // selecting new buttons from html
+  const radioBtns = document.querySelectorAll('.form-check-input');
+  // converting buttons nodeList into array
+  let arrayBtns = Array.from(radioBtns);
+  // triggering find when button clicked
+  radioBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      let btnChecked = arrayBtns.find((btn) => btn.checked);
+      let categoryChecked = btnChecked.id;
+      console.log(categoryChecked);
+      createCards(array, categoryChecked);
+    });
+  });
+  let btnChecked = arrayBtns.find((btn) => btn.checked);
+  console.log(arrayBtns);
 }
 
 
@@ -72,14 +112,10 @@ window.addEventListener("scroll", () => {
     navbar.classList.remove("navbar-scroll");
   }
 });
-window.addEventListener("scroll", () => {
-  console.log(window.scrollY);
-
-});
 
 // FETCH 
 fetch("./products.json").then((result) => result.json()).then((data) => {
-  createCards(data);
+  createCards(data, "All");
   createBtns(data);
   // creating array of unique categories 
   // (Painting, Sculpture, Music, Book)
