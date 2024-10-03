@@ -16,50 +16,78 @@ const navbar = document.querySelector("nav");
 // cards section
 const cardsWrapper = document.querySelector(".cardsWrapper");
 // buttons section
-const radiowrapper = document.querySelector("#radiowrapper");
+const radioWrapper = document.querySelector("#radioWrapper");
+// price range
+const formRange = document.querySelector(".form-range");
+const formLabel = document.querySelector(".form-label");
+const searchName = document.querySelector(".search-name");
+
 
 // FUNCTIONS 
-// f creates / filters cards
-function createCards(array, category) {
+// create cards function 
+function createCards(array) {
   // empty cards wrapper
   cardsWrapper.innerHTML = '';
-  if (category == "All") {
-    array.forEach(element => {
-      let div = document.createElement("div");
-      div.classList.add("col-12", "col-sm-6", "card");
-      div.innerHTML = `
-          <img src="${element.img}">
-          <div class="card-body">
-            <h5 class="card-title">${element.name}</h5>
-            <p class="card-text"><strong>$ ${element.price}</strong></p>
-            <p class="card-text category"><strong>${element.category}</strong></p>
-            <p class="card-text"> ${element.date} </p>
-          </div>`;
-      cardsWrapper.appendChild(div);
-    });
-  }
-  else {
-    array.forEach(element => {
-      if (element.category == category) {
-
-        let div = document.createElement("div");
-        div.classList.add("col-12", "col-sm-6", "card");
-        div.innerHTML = `
-            <img src="${element.img}">
-            <div class="card-body">
-              <h5 class="card-title">${element.name}</h5>
-              <p class="card-text"><strong>$ ${element.price}</strong></p>
-              <p class="card-text category"><strong>${element.category}</strong></p>
-              <p class="card-text"> ${element.date} </p>
-            </div>`;
-        cardsWrapper.appendChild(div);
-      }
-    });
-  }
+  array.forEach(element => {
+    let div = document.createElement("div");
+    div.classList.add("col-12", "col-sm-6", "card");
+    div.innerHTML = `
+        <img src="${element.img}">
+        <div class="card-body">
+          <h5 class="card-title">${element.name}</h5>
+          <p class="card-text"><strong>$ ${element.price}</strong></p>
+          <p class="card-text category"><strong>${element.category}</strong></p>
+          <p class="card-text"> ${element.date} </p>
+        </div>`;
+    cardsWrapper.appendChild(div);
+  });
 }
 
+// filterByCategory function 
+function filterByCategory(array) {
+  // select all the radio buttons (as Node List)
+  const radioBtns = document.querySelectorAll('.form-check-input');
+  // converting buttons nodeList into Array
+  let arrayBtns = Array.from(radioBtns);
+  // selecting the one button checked with find()
+  let btnChecked = arrayBtns.find((btn) => btn.checked);
+  // selecting the category of the checked button
+  let category = btnChecked.id;
+  if (category == "All") {
+    return array;
+  }
+  let filteredByCategory = array.filter(element => element.category === category);
+  // returning filtered array by category
+  return filteredByCategory;
+}
 
-// f that creates radio buttons 
+// filterByPrice function 
+function filterByPrice(array) {
+  let price = formRange.value;
+  let filteredByPrice = array.filter(element => element.price <= price).sort((a, b) => (b.price - a.price));
+  return filteredByPrice;
+}
+
+// filterByName function
+function filterByName(array) {
+  let currentInput = searchName.value;
+  if (currentInput == '') {
+    return array;
+  }
+  let filteredByName = array.filter((element) => element.name.toLowerCase().includes(currentInput.toLowerCase()));
+  
+  return filteredByName;
+}
+
+// global filter function 
+function globalFilter(array) {
+  let filteredByCategory = filterByCategory(array);
+  let filteredByPrice = filterByPrice(filteredByCategory);
+  let filteredByName = filterByName(filteredByPrice);
+  createCards(filteredByName);
+}
+
+// creates radio buttons function
 function createBtns(array) {
   let uniqueCategories = [];
   array.forEach((product) => {
@@ -81,27 +109,22 @@ function createBtns(array) {
       </label>
     </div>
       `;
-    radiowrapper.appendChild(div);
+    radioWrapper.appendChild(div);
   });
-  // selecting new buttons from html
   const radioBtns = document.querySelectorAll('.form-check-input');
-  // converting buttons nodeList into array
-  let arrayBtns = Array.from(radioBtns);
-  // triggering find when button clicked
-  radioBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      let btnChecked = arrayBtns.find((btn) => btn.checked);
-      let categoryChecked = btnChecked.id;
-      console.log(categoryChecked);
-      createCards(array, categoryChecked);
-    });
+  radioBtns.forEach(element => {
+    element.addEventListener('click', () => {
+      globalFilter(array);
+    })
   });
-  let btnChecked = arrayBtns.find((btn) => btn.checked);
-  console.log(arrayBtns);
 }
 
+// function filter by price
+// function filterByPrice(array) {
+//   let filteredByPrice = array.filter((el) => (el.price < formRange.value));
+//   createCards(filteredByPrice);
 
-
+// }
 
 // TRIGGERS
 window.addEventListener("scroll", () => {
@@ -115,9 +138,28 @@ window.addEventListener("scroll", () => {
 
 // FETCH 
 fetch("./products.json").then((result) => result.json()).then((data) => {
-  createCards(data, "All");
+  createCards(data);
   createBtns(data);
-  // creating array of unique categories 
-  // (Painting, Sculpture, Music, Book)
+  // function filterByPrice(array) {
+
+
+  // }
+  // event listener for input range
+  formRange.addEventListener("input", (event) => {
+    const formattedValue = new Intl.NumberFormat('it-IT', {
+      style: 'currency',
+      currency: 'USD',
+      minimumFractionDigits: 0,
+      maximumFractionDigits: 0
+    }).format(event.target.value);
+
+    formLabel.innerText = formattedValue;
+
+
+    globalFilter(data);
+  });
+  searchName.addEventListener("input", (event) => {
+    globalFilter(data);
+  });
 
 }) 

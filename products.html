@@ -42,10 +42,10 @@
   <!-- cards e buttons -->
   <div class="container-fluid">
     <div class="row">
-      <div class="col-4 bg-warning">
-        <!-- buttons -->
-        <div id="radiowrapper">
-          <h3>Filtro per Categoria</h3>
+      <!-- buttons -->
+      <div class="col-4 background-p">
+        <div id="radioWrapper">
+          <h5 class="">Filtro per Categoria</h5>
           <div class="form-check">
             <input class="form-check-input" type="radio" name="flexRadioDefault" id="All" checked>
             <label class="form-check-label" for="All">
@@ -53,10 +53,26 @@
             </label>
           </div>
         </div>
+        <div id="rangeWrapper">
+          <h5>Filtro per Prezzo</h5>
+          <label for="customRange" class="form-label">Example range</label>
+          <input type="range" class="form-range" min="0" max="150000000" step="100000" id="customRange">
+        </div>
+        <div id="nameWrapper">
+          <h5>Filtro per Parola</h5>
+          <div class="input-group flex-nowrap">
+            
+            <input type="text" class="search-name form-control" placeholder="Search" aria-label="SearchByWord"
+              aria-describedby="addon-wrapping">
+          </div>
+          
+        </div>
+
       </div>
-      
+
+
       <!-- cards -->
-      <div class="col-8 bg-info">
+      <div class="col-8">
         <div class="row cardsWrapper">
 
         </div>

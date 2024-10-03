@@ -5,7 +5,7 @@
     "category": "Painting",
     "date": "1889",
     "img": "https://picsum.photos/300",
-    "price": 25000000
+    "price": 150000000
   },
   {
     "name": "The Thinker",
@@ -13,7 +13,7 @@
     "category": "Sculpture",
     "date": "1902",
     "img": "https://picsum.photos/301",
-    "price": 8000000
+    "price": 100000000
   },
   {
     "name": "Bohemian Rhapsody",
@@ -21,7 +21,7 @@
     "category": "Music",
     "date": "1975",
     "img": "https://picsum.photos/302",
-    "price": 2000000
+    "price": 50000000
   },
   {
     "name": "To Kill a Mockingbird",
@@ -29,7 +29,7 @@
     "category": "Book",
     "date": "1960",
     "img": "https://picsum.photos/303",
-    "price": 15000
+    "price": 20000000
   },
   {
     "name": "The Persistence of Memory",
@@ -37,7 +37,7 @@
     "category": "Painting",
     "date": "1931",
     "img": "https://picsum.photos/304",
-    "price": 13000000
+    "price": 130000000
   },
   {
     "name": "David",
@@ -45,7 +45,7 @@
     "category": "Sculpture",
     "date": "1504",
     "img": "https://picsum.photos/305",
-    "price": 50000000
+    "price": 90000000
   },
   {
     "name": "Fur Elise",
@@ -53,7 +53,7 @@
     "category": "Music",
     "date": "1810",
     "img": "https://picsum.photos/306",
-    "price": 50000
+    "price": 10000000
   },
   {
     "name": "Moby Dick",
@@ -61,7 +61,7 @@
     "category": "Book",
     "date": "1851",
     "img": "https://picsum.photos/307",
-    "price": 25000
+    "price": 15000000
   },
   {
     "name": "Girl with a Pearl Earring",
@@ -69,7 +69,7 @@
     "category": "Painting",
     "date": "1665",
     "img": "https://picsum.photos/308",
-    "price": 30000000
+    "price": 85000000
   },
   {
     "name": "The Great Wave off Kanagawa",
@@ -77,7 +77,7 @@
     "category": "Painting",
     "date": "1831",
     "img": "https://picsum.photos/309",
-    "price": 1200000
+    "price": 30000000
   },
   {
     "name": "Les Demoiselles d'Avignon",
@@ -85,7 +85,7 @@
     "category": "Painting",
     "date": "1907",
     "img": "https://picsum.photos/310",
-    "price": 45000000
+    "price": 140000000
   },
   {
     "name": "Symphony No. 5",
@@ -93,7 +93,7 @@
     "category": "Music",
     "date": "1808",
     "img": "https://picsum.photos/311",
-    "price": 75000
+    "price": 25000000
   },
   {
     "name": "War and Peace",
@@ -101,7 +101,7 @@
     "category": "Book",
     "date": "1869",
     "img": "https://picsum.photos/312",
-    "price": 35000
+    "price": 18000000
   },
   {
     "name": "The Kiss",
@@ -109,7 +109,7 @@
     "category": "Painting",
     "date": "1908",
     "img": "https://picsum.photos/313",
-    "price": 12000000
+    "price": 60000000
   },
   {
     "name": "The Scream",
@@ -117,7 +117,7 @@
     "category": "Painting",
     "date": "1893",
     "img": "https://picsum.photos/314",
-    "price": 119000000
+    "price": 110000000
   },
   {
     "name": "The Statue of Liberty",
@@ -125,7 +125,7 @@
     "category": "Sculpture",
     "date": "1886",
     "img": "https://picsum.photos/315",
-    "price": 1000000000
+    "price": 20000000
   },
   {
     "name": "The Catcher in the Rye",
@@ -133,7 +133,7 @@
     "category": "Book",
     "date": "1951",
     "img": "https://picsum.photos/316",
-    "price": 22000
+    "price": 17000000
   },
   {
     "name": "Symphony No. 9",
@@ -141,7 +141,7 @@
     "category": "Music",
     "date": "1824",
     "img": "https://picsum.photos/317",
-    "price": 110000
+    "price": 40000000
   },
   {
     "name": "The Birth of Venus",
@@ -149,7 +149,7 @@
     "category": "Painting",
     "date": "1486",
     "img": "https://picsum.photos/318",
-    "price": 50000000
+    "price": 95000000
   },
   {
     "name": "The David",
@@ -157,6 +157,6 @@
     "category": "Sculpture",
     "date": "1440",
     "img": "https://picsum.photos/319",
-    "price": 40000000
+    "price": 70000000
   }
 ]
