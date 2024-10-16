@@ -168,12 +168,15 @@ body {
   /* Light gray background for certain sections */
 }
 
- #radioWrapper,  #rangeWrapper, #nameWrapper {
+#radioWrapper,
+#rangeWrapper,
+#nameWrapper {
   background-color: #19242f57;
   padding: 10px;
   border-radius: 10px;
   margin: 10px 0px;
- }
+}
+
 h5 {
   color: var(--color-s)
 }
@@ -181,4 +184,33 @@ h5 {
 .search-name {
   width: 100%;
   border-radius: 5px;
+}
+
+.div-numbers {
+  margin: 10px;
+  border: 2px solid #72440c;
+}
+
+.text-span {
+  color: #72440c;
+}
+.swiper {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  background-color: var(--color-p);
+  width: 400px;
+  height: 400px;
+}
+
+.img-slide {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 2px solid white;
 }

@@ -5,10 +5,18 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Artrade</title>
+  <!-- Import AOS CSS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!-- Import Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <!-- Import Bootstrap icons CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
   <!-- Import Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
-  <link rel="stylesheet" href="./style.css" /> <!-- Link to custom CSS -->
+  <!-- Link to custom CSS -->
+  <link rel="stylesheet" href="./style.css" />
 </head>
 
 <body>
@@ -90,13 +98,68 @@
     </button>
   </div>
   <!-- End Carousel -->
-
+  <!-- 
+ -->
   <!-- Auction Cards Section -->
   <div class="container-fluid">
-    <div class="row background-p row-title row-title-auction">
+    <div class="row background-s text-p row-title row-title-categories py-1">
       <h1 class="text-center pt-2 pb-1"> At Auction </h1>
     </div>
     <div class="row">
+      <div class="col-12 col-sm-4 card">
+        <img src="./media/robert_colescott.png" class="card-img-top" alt="Robert Colescott Image">
+        <div class="card-body">
+          <h5 class="card-title">Robert Colescott</h5>
+          <p class="card-text">Work on Paper</p>
+          <p class="card-text"><strong>$5,500 (2 bids)</strong></p>
+          <p class="card-text">Register by Sep 27</p>
+        </div>
+      </div>
+      <div class="col-12 col-sm-4 card">
+        <img src="./media/elle_carey.png" class="card-img-top" alt="Ellen Carey Image">
+        <div class="card-body">
+          <h5 class="card-title">Ellen Carey</h5>
+          <p class="card-text">Dings & Shadows, 2017</p>
+          <p class="card-text">Broadway Housing Co.</p>
+          <p class="card-text"><strong>$2,400</strong></p>
+        </div>
+      </div>
+      <div class="col-12 col-sm-4 card">
+        <img src="./media/ken_price.png" class="card-img-top" alt="Ken Price Image">
+        <div class="card-body">
+          <h5 class="card-title">Ken Price</h5>
+          <p class="card-text">Stamp of the Past, 1989</p>
+          <p class="card-text">Rago/Wright/LAMA</p>
+          <p class="card-text"><strong>Bidding live now</strong></p>
+        </div>
+      </div>
+      <div class="col-12 col-sm-4 card">
+        <img src="./media/robert_colescott.png" class="card-img-top" alt="Robert Colescott Image">
+        <div class="card-body">
+          <h5 class="card-title">Robert Colescott</h5>
+          <p class="card-text">Work on Paper</p>
+          <p class="card-text"><strong>$5,500 (2 bids)</strong></p>
+          <p class="card-text">Register by Sep 27</p>
+        </div>
+      </div>
+      <div class="col-12 col-sm-4 card">
+        <img src="./media/elle_carey.png" class="card-img-top" alt="Ellen Carey Image">
+        <div class="card-body">
+          <h5 class="card-title">Ellen Carey</h5>
+          <p class="card-text">Dings & Shadows, 2017</p>
+          <p class="card-text">Broadway Housing Co.</p>
+          <p class="card-text"><strong>$2,400</strong></p>
+        </div>
+      </div>
+      <div class="col-12 col-sm-4 card">
+        <img src="./media/ken_price.png" class="card-img-top" alt="Ken Price Image">
+        <div class="card-body">
+          <h5 class="card-title">Ken Price</h5>
+          <p class="card-text">Stamp of the Past, 1989</p>
+          <p class="card-text">Rago/Wright/LAMA</p>
+          <p class="card-text"><strong>Bidding live now</strong></p>
+        </div>
+      </div>
       <div class="col-12 col-sm-4 card">
         <img src="./media/robert_colescott.png" class="card-img-top" alt="Robert Colescott Image">
         <div class="card-body">
@@ -129,7 +192,7 @@
   <!-- End Auction Cards Section -->
 
   <!-- Categories Section -->
-  <div class="container-fluid">
+  <div class="container-fluid" data-aos="fade-up">
     <div class="row background-s text-p row-title row-title-categories py-1">
       <h1 class="text-center pt-2 pb-1"> Categories </h1>
     </div>
@@ -160,27 +223,156 @@
   <!-- End Categories Section -->
 
   <!-- Numbers Section -->
-  <div class="container-fluid">
-    <div class="row bg-white row-title row-title-auction">
+  <div class="container-fluid" data-aos="fade-up">
+    <div class="row background-s text-p row-title row-title-categories py-1">
       <h1 class="text-center pt-2 pb-1"> Numbers </h1>
     </div>
-    <div class="row background-s justify-content-center">
+    <div class="row justify-content-center">
       <!-- Numbers: Pieces -->
-      <div class="col-5 bg-danger text-center p-5 mx-2">
-        <span class="numbers pieces-number text-light">
-          1,235 Pieces Sold <!-- Placeholder text for pieces number -->
+      <div class="col-5 div-numbers d-flex justify-content-around align-items-center flex-column p-5 mx-2">
+        <span class="numbers pieces-number">
+          0 <!-- Placeholder text for pieces number -->
+        </span>
+        <span class="fw-bolder">
+          pieces <span class="text-span"> Sold </span> <!-- Placeholder text for pieces number -->
         </span>
       </div>
       <!-- Numbers: Customers -->
-      <div class="col-5 bg-danger text-center p-5 mx-2">
-        <span class="numbers costumers-number text-light">
-          982 Happy Customers <!-- Placeholder text for customers number -->
+      <div class="col-5 div-numbers d-flex justify-content-around align-items-center flex-column p-5 mx-2">
+        <span class="numbers costumers-number">
+          0 <!-- Placeholder text for customers number -->
+        </span>
+        <span class="fw-bolder">
+          new <span class="text-span"> Costumers </span> <!-- Placeholder text for customers number -->
         </span>
       </div>
     </div>
   </div>
   <!-- End Numbers Section -->
 
+  <!-- Reviews w swiper -->
+  <div class="row background-s text-p row-title row-title-categories py-1">
+    <h1 class="text-center pt-2 pb-1"> Reviews </h1>
+  </div>
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide d-flex justify-content-center align-items-center">
+        <div class="box-reviews d-flex flex-column justify-content-start align-items-center bg-info p-5 h-100">
+          <div class="user-div d-flex flex-column  align-items-center bg-success p-3">
+            <h3> Prova </h3>
+            <img src="https://picsum.photos/300" alt="" class="img-slide my-2">
+          </div>
+          <div class="star-div fs-5 w-100 bg-danger text-center">
+            <i class="bi bi-star-fill text-warning"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+          </div>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Praesentium impedit inventore enim quisquam
+            voluptatibus nemo! Nobis, in harum at quod, ullam a corporis numquam dolor, ratione eaque voluptatum vel.
+            Voluptates.</p>
+        </div>
+      </div>
+      <div class="swiper-slide d-flex justify-content-center align-items-center">
+        <div class="box-reviews d-flex flex-column justify-content-around align-items-center p-5 h-100">
+          <div class="user-div d-flex flex-column  align-items-center bg-success">
+            <h3> Prova </h3>
+            <img src="https://picsum.photos/300" alt="" class="img-slide my-2">
+          </div>
+          <div class="star-div w-100 bg-danger text-center">
+            <i class="bi bi-star-fill text-warning"></i>
+            <i class="bi bi-star-fill text-warning"></i>
+            <i class="bi bi-star-fill text-warning"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+          </div>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Praesentium impedit inventore enim quisquam
+            voluptatibus nemo! Nobis, in harum at quod, ullam a corporis numquam dolor, ratione eaque voluptatum vel.
+            Voluptates.</p>
+        </div>
+      </div>
+      <div class="swiper-slide d-flex justify-content-center align-items-center">
+        <div class="box-reviews d-flex flex-column justify-content-around align-items-center p-5 h-100">
+          <div class="user-div d-flex flex-column  align-items-center bg-success">
+            <h3> Prova </h3>
+            <img src="https://picsum.photos/300" alt="" class="img-slide my-2">
+          </div>
+          <div class="star-div w-100 bg-danger text-center">
+            <i class="bi bi-star-fill text-warning"></i>
+            <i class="bi bi-star-fill text-warning"></i>
+            <i class="bi bi-star-fill text-warning"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+          </div>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Praesentium impedit inventore enim quisquam
+            voluptatibus nemo! Nobis, in harum at quod, ullam a corporis numquam dolor, ratione eaque voluptatum vel.
+            Voluptates.</p>
+        </div>
+      </div>
+      <div class="swiper-slide d-flex justify-content-center align-items-center">
+        <div class="box-reviews d-flex flex-column justify-content-around align-items-center p-5 h-100">
+          <div class="user-div d-flex flex-column  align-items-center bg-success">
+            <h3> Prova </h3>
+            <img src="https://picsum.photos/300" alt="" class="img-slide my-2">
+          </div>
+          <div class="star-div w-100 bg-danger text-center">
+            <i class="bi bi-star-fill text-warning"></i>
+            <i class="bi bi-star-fill text-warning"></i>
+            <i class="bi bi-star-fill text-warning"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+          </div>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Praesentium impedit inventore enim quisquam
+            voluptatibus nemo! Nobis, in harum at quod, ullam a corporis numquam dolor, ratione eaque voluptatum vel.
+            Voluptates.</p>
+        </div>
+      </div>
+      <div class="swiper-slide d-flex justify-content-center align-items-center">
+        <div class="box-reviews d-flex flex-column justify-content-around align-items-center p-5 h-100">
+          <div class="user-div d-flex flex-column  align-items-center bg-success">
+            <h3> Prova </h3>
+            <img src="https://picsum.photos/300" alt="" class="img-slide my-2">
+          </div>
+          <div class="star-div w-100 bg-danger text-center">
+            <i class="bi bi-star-fill text-warning"></i>
+            <i class="bi bi-star-fill text-warning"></i>
+            <i class="bi bi-star-fill text-warning"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+          </div>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Praesentium impedit inventore enim quisquam
+            voluptatibus nemo! Nobis, in harum at quod, ullam a corporis numquam dolor, ratione eaque voluptatum vel.
+            Voluptates.</p>
+        </div>
+      </div>
+      <div class="swiper-slide d-flex justify-content-center align-items-center">
+        <div class="box-reviews d-flex flex-column justify-content-around align-items-center p-5 h-100">
+          <div class="user-div d-flex flex-column  align-items-center bg-success">
+            <h3> Prova </h3>
+            <img src="https://picsum.photos/300" alt="" class="img-slide my-2">
+          </div>
+          <div class="star-div w-100 bg-danger text-center">
+            <i class="bi bi-star-fill text-warning"></i>
+            <i class="bi bi-star-fill text-warning"></i>
+            <i class="bi bi-star-fill text-warning"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+          </div>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Praesentium impedit inventore enim quisquam
+            voluptatibus nemo! Nobis, in harum at quod, ullam a corporis numquam dolor, ratione eaque voluptatum vel.
+            Voluptates.</p>
+        </div>
+      </div>
+    </div>
+    <div class="swiper-pagination"></div>
+  </div>
+  <!-- End Reviews w swiper -->
+
+  <!-- Import AOS JavaScript -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <!-- Import Swiper JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <!-- Import Bootstrap JavaScript -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
