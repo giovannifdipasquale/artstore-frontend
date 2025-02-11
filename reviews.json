@@ -1,0 +1,142 @@
+[
+  {
+    "id": 1,
+    "user": "Alice",
+    "stars": 5,
+    "image": "https://picsum.photos/300",
+    "description": "Amazing experience! The service was top-notch and exceeded my expectations."
+  },
+  {
+    "id": 2,
+    "user": "Bob",
+    "stars": 4,
+    "image": "https://picsum.photos/301",
+    "description": "Great quality and fast delivery. Will definitely buy again."
+  },
+  {
+    "id": 3,
+    "user": "Charlie",
+    "stars": 3,
+    "image": "https://picsum.photos/302",
+    "description": "The product was decent, but I expected better customer support."
+  },
+  {
+    "id": 4,
+    "user": "Diana",
+    "stars": 5,
+    "image": "https://picsum.photos/303",
+    "description": "Absolutely fantastic! Highly recommended for anyone in need."
+  },
+  {
+    "id": 5,
+    "user": "Edward",
+    "stars": 2,
+    "image": "https://picsum.photos/304",
+    "description": "Not very satisfied. The quality could be improved."
+  },
+  {
+    "id": 6,
+    "user": "Fiona",
+    "stars": 4,
+    "image": "https://picsum.photos/305",
+    "description": "Good value for the price. Could use some minor improvements."
+  },
+  {
+    "id": 7,
+    "user": "George",
+    "stars": 5,
+    "image": "https://picsum.photos/306",
+    "description": "Exceeded all my expectations! Will be recommending to friends."
+  },
+  {
+    "id": 8,
+    "user": "Hannah",
+    "stars": 3,
+    "image": "https://picsum.photos/307",
+    "description": "It was okay. Nothing special but not bad either."
+  },
+  {
+    "id": 9,
+    "user": "Ian",
+    "stars": 1,
+    "image": "https://picsum.photos/308",
+    "description": "Very disappointed. Poor customer service and low quality."
+  },
+  {
+    "id": 10,
+    "user": "Julia",
+    "stars": 5,
+    "image": "https://picsum.photos/309",
+    "description": "Perfect in every way! Can't wait to order again."
+  },
+  {
+    "id": 11,
+    "user": "Kevin",
+    "stars": 4,
+    "image": "https://picsum.photos/310",
+    "description": "Very good experience, but a slight delay in shipping."
+  },
+  {
+    "id": 12,
+    "user": "Laura",
+    "stars": 2,
+    "image": "https://picsum.photos/311",
+    "description": "Not what I expected. The product description was misleading."
+  },
+  {
+    "id": 13,
+    "user": "Mike",
+    "stars": 5,
+    "image": "https://picsum.photos/312",
+    "description": "Top quality and amazing customer service!"
+  },
+  {
+    "id": 14,
+    "user": "Nina",
+    "stars": 3,
+    "image": "https://picsum.photos/313",
+    "description": "It's fine, but I wouldn't purchase again."
+  },
+  {
+    "id": 15,
+    "user": "Oscar",
+    "stars": 4,
+    "image": "https://picsum.photos/314",
+    "description": "Good experience, but packaging was slightly damaged."
+  },
+  {
+    "id": 16,
+    "user": "Paula",
+    "stars": 1,
+    "image": "https://picsum.photos/315",
+    "description": "Wouldn't recommend. Poor quality and very late delivery."
+  },
+  {
+    "id": 17,
+    "user": "Quentin",
+    "stars": 5,
+    "image": "https://picsum.photos/316",
+    "description": "Everything was perfect. I'll be a returning customer for sure!"
+  },
+  {
+    "id": 18,
+    "user": "Rachel",
+    "stars": 4,
+    "image": "https://picsum.photos/317",
+    "description": "Good overall, but some room for improvement."
+  },
+  {
+    "id": 19,
+    "user": "Steve",
+    "stars": 2,
+    "image": "https://picsum.photos/318",
+    "description": "Not impressed. The item was not as described."
+  },
+  {
+    "id": 20,
+    "user": "Tina",
+    "stars": 5,
+    "image": "https://picsum.photos/319",
+    "description": "Absolutely fantastic! Highly recommended."
+  }
+]
